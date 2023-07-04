@@ -59,3 +59,23 @@ r1.draw(canvas)
 s1 = Square(x=1,y=3, side=3, color=(0, 100, 222))
 s1.draw(canvas)
 canvas.make('canvas.png')
+
+from canvas import Canvas
+from shapes import Rectangle, Square
+
+# get canvas width and height for user
+canvas_width = int(input("Enter canvas width: "))
+canvas_height = int(input("Enter canvas height: "))
+
+# Make a dictionary of color codes and prompt for color
+colors = {"white": (255, 255, 255), "black": (0, 0, 0)}
+canvas_color = input("Enter canvas color (white or black): ")
+
+# Create a canvas with user data
+canvas = Canvas(height=canvas_height, width=canvas_width, color=colors[canvas_color])
+
+while true:
+    shape_type = input("What do you like to draw? Enter quit to quit. ")
+    # Ask for rectangle data and create rectangle if user entered 'rectangle'
+    if shape_type.lower() == 'rectangle':
+        rec_x = int(input(""))
